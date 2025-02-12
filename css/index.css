@@ -21,6 +21,24 @@ p {
     width: 100%;
 }
 
+
+/* map overlay for top map overlay below */
+.map-overlay-top {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.8);
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.2);
+    margin-left: 20px;
+    font-family: Arial, sans-serif;
+    /* overflow: auto; */
+    border-radius: 3px;
+    /* padding-bottom: auto; */
+    /* height: auto; */
+}
+
 /* map overlay elements below */
 .map-overlay {
     position: absolute;
@@ -38,7 +56,7 @@ p {
 
 #features {
     top: 0;
-    height: 100px;
+    /* height: 100px; */
     margin-top: 20px;
     width: 250px;
 }

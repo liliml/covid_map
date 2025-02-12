@@ -3,8 +3,8 @@ mapboxgl.accessToken = 'pk.eyJ1Ijoicm9zZS0xNjgiLCJhIjoiY202aWYxY3lsMDdxdjJpcHJoa
 const map = new mapboxgl.Map({
         container: 'map', // container ID
         style: 'mapbox://styles/mapbox/light-v10', // style URL
-        zoom: 3, // starting zoom
-        center: [-100, 40] // starting center
+        zoom: 6, // starting zoom
+        center: [-122, 47.5] // starting center
     }
 );
 
@@ -45,11 +45,11 @@ async function geojsonFetch() {
                     6000,        // stop_input_6
                     "#800026",    // stop_output_7
                     6500,        // stop_input_7
-                    "#e13b26",    // stop_output_8
+                    "#2a006f",    // stop_output_8
                     7000,        // stop_input_8
-                    "#ad0955",    // stop_output_9
+                    "#5000d2",    // stop_output_9
                     7500,        // stop_input_9
-                    "#86013e",    // stop_output_10
+                    "#000000",    // stop_output_10
                     
                 ],
                 'fill-outline-color': '#BBBBBB',
@@ -81,9 +81,9 @@ async function geojsonFetch() {
         '#E31A1C',  
         '#BD0026', 
         "#800026",  
-        "#e13b26",  
-        "#ad0955",  
-        "#86013e"
+        "#2a006f",  
+        "#5000d2",  
+        "#000000"
     ];
     
     const legend = document.getElementById('legend');
@@ -108,8 +108,8 @@ async function geojsonFetch() {
             layers: ['wa_covid_data-layer']
         });
         document.getElementById('text-description').innerHTML = state.length ?
-            `<h3>${state[0].properties.name}</h3><p><strong><em>${state[0].properties.density}</strong> people per square mile</em></p>` :
-            `<p>Hover over a state!</p>`;
+            `<h3>${state[0].properties.name}</h3><p><strong><em>${state[0].properties.fullyVaxPer10k}</strong> number of people who are fully vaccinated per 10k people within the county</em></p>` :
+            `<p>Hover over a Washington county!</p>`;
     });
 }
 
